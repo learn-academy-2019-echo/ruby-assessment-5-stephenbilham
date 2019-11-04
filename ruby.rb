@@ -40,6 +40,38 @@ end
 
 # 5a. Create a class called Animal that initializes with a color. Create a method in the class called legs that returns 4.
 
-
+class Animal
+  def initialize(color ='brown')
+    @color = color
+    @legs = 4
+  end
+    def legs
+      @legs
+  end
+  def color
+    @color
+  end
+end
+animal = Animal.new
+p animal.legs
 
 # 5b. Create a new instance of an Animal with a brown color. Return how the number of legs for the animal object.
+
+class Animal
+  def initialize(color)
+    @color = color
+    @legs = 4
+  end
+    def legs
+      @legs
+  end
+end
+
+class BrownAnimal < Animal
+  def initialize(color)
+    super('brown')
+  end
+end
+
+animal = BrownAnimal.new
+animal.legs
